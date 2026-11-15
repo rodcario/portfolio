@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>site</title>
+  <style>
+    :root {
+      --page-width: 72rem;
+      --card-min-width: 18rem;
+      --grid-gap: clamp(1rem, 3vw, 2rem);
+      --page-padding: clamp(1rem, 4vw, 2rem);
+      --text: #ffffff;
+      --muted: #c4c4c4;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      color: var(--text);
+      background: #0e0e0e;
+      font: 1rem/1.6 system-ui, sans-serif;
+    }
+
+    header,
+    main {
+      width: min(100%, var(--page-width));
+      margin-inline: auto;
+      padding-inline: var(--page-padding);
+    }
+
+    header {
+      padding-block: 2rem 1rem;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(1.75rem, 5vw, 2.5rem);
+      line-height: 1.2;
+    }
+
+    .artwork h2 a {
+      color: #70bfff;
+    }
+    
+    .artwork h2 a:hover {
+      color: #ffffff;
+    }
+
+    main {
+      padding-bottom: 3rem;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--card-min-width)), 1fr));
+      gap: var(--grid-gap);
+    }
+
+    .artwork img,
+    .artwork video {
+      display: block;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: contain;
+      background: #171717;
+    }
+
+    .intro {
+      text-align: center;
+    }
+
+    .intro img.centered {
+      display: block;
+      width: 100%;
+      max-width: 18rem;
+      height: auto;
+      margin: 0 auto 1rem;
+    }
+
+    .artwork h2 {
+      margin: 0.75rem 0 0;
+      font-size: 1rem;
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+  <header class="intro">
+    <img class="centered" src="images/lucario pfp1-a.png" alt="Lucario">
+    <p>im a 3d and 2d artist(better at 3d tho) and here is shit i made :)</p>
+  </header>
+
+  <main class="gallery">
+    <!-- Put each new artwork before older ones to keep the newest at the top. -->
+    <article class="artwork">
+      <img src="images/aura_jackal_model.png">
+      <h2>vtuber model for aura jackal</h2>
+    </article>
+    <article class="artwork">
+      <img src="images/random_lucario_model.png">
+      <h2>a model fighting game i was working and stopped because i cant focus on anything that takes more then 2-3 days max :)</h2>
+    </article>
+    <article class="artwork">
+      <img src="images/lucario spooky dance.gif">
+      <h2>lucario doing spooky dance :) what more can i say :)</h2>
+    </article>
+    <article class="artwork">
+      <video controls preload="metadata">
+        <source src="videos/backrooms.mp4" type="video/mp4">
+      </video>
+      <h2>some random shit i made because why not found it and desided to put it here :)</h2>
+      <h2></h2>
+    </article>
+    <article class="artwork">
+      <img src="images/gmod_lucario_plush.png">
+      <h2>a random gmod mod i made, you can find it <a href=https://steamcommunity.com/sharedfiles/filedetails/?id=3590969524>here</a></h2>
+    </article>
+  </main>
+</body>
+</html>
